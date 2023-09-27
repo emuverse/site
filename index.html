@@ -11,20 +11,6 @@
 <body>
   <header>
     <h1>Luan Tech</h1>
-<div class="drawer">
-  <div class="drawer-header">
-    Luan Tech
-    <span class="close-btn" onclick="closeDrawer()">&times;</span>
-  </div>
-  <ul class="drawer-menu">
-    <li><a href="index.html">Início</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-  </ul>
-</div>
-
-<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=4689cd65-d3d3-4769-ae7f-d2e5fa977c2a" class="invert-colors"></a>
-
-
     
   </header>
   <section class="app-list">
@@ -63,7 +49,9 @@
       <h2>Criação de Site/Aplicativo</h2>
       <p>Oferecemos serviços especializados na criação de sites e aplicativos para atender às suas necessidades exclusivas. Desenvolvemos sites responsivos e aplicativos personalizados para atender às demandas do mercado atual, proporcionando a você uma presença online eficaz e interativa.</p>
     </div>
-    
+    <a href="https://wa.me/seu_numerodoWhatsApp" target="_blank" class="whatsapp-button">
+    <i class="whatsapp-icon">WhatsApp</i>
+    </a>
   </section>
   <footer>
     
@@ -88,7 +76,20 @@ function closeDrawer() {
     margin: 0;
     padding: 0;
 }
-
+.whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1000;
+}
 header {
     background-color: #1a1a1a;
     padding: 20px;
