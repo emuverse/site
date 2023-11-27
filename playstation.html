@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>EmuVerse - PlayStation</title>
+</head>
+
+<body>
+  <header>
+    <h1>PlayStation</h1>
+<div class="drawer">
+  <div class="drawer-header">
+    EmuVerse
+    <span class="close-btn" onclick="closeDrawer()">&times;</span>
+  </div>
+  <ul class="drawer-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="categorias.html">Categorias</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=4689cd65-d3d3-4769-ae7f-d2e5fa977c2a" class="invert-colors"></a>
+<div class="search-container">
+  <input type="text" class="search-input" id="pesquisa" onkeyup="searchElements()" placeholder="Buscar">
+</div>
+<script>
+  function searchElements() {
+    var searchTerm = document.getElementById("pesquisa").value.toLowerCase();
+    var elements = document.querySelectorAll(".app-card");
+
+    elements.forEach(function(element) {
+      var text = element.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+</script>
+  </header>
+  <section class="app-list">
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Faether.png?alt=media&token=7de5d7e5-337f-49fb-b17c-7021e2674adb">
+      <h2>AetherSX2</h2>
+      <p>O AetherSX2 é um emulador de PS2 para Android que permite jogar jogos do PS2 no seu celular ou tablet. Ele
+        recria a experiência de jogar no console PS2, mas no seu dispositivo móvel.</p>
+      <a href="AetherSX2.apk" download>Baixar</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fppsspp.png?alt=media&token=1b18a775-c971-40bd-adc6-8da223a5aa3f">
+      <h2>PPSSPP</h2>
+      <p>O PPSSPP é um emulador que permite jogar jogos do PSP no seu computador ou dispositivo móvel. Ele recria a experiência do PlayStation Portable, possibilitando gráficos melhores e controles personalizados.</p>
+      <a href="PPSSPP.apk" download>Baixar</a> <a href="https://www.ppsspp.org/">Site oficial</a>
+    </div>
+  
+    <div class="app-card">
+      <img src="https://emulation.gametechwiki.com/images/5/5a/DuckStation.png">
+      <h2>DuckStation</h2>
+      <p>DuckStation é um emulador de código aberto para jogos de PlayStation (PSX/PS1) que permite aos usuários jogar esses jogos em seus computadores e dispositivos. Ele tenta emular com precisão os sistemas de hardware originais para proporcionar uma experiência de jogo semelhante à dos consoles.</p>
+      <a href="" download>Baixar</a>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 EmuVerse</p>
+  </footer>
+  <script src="Scripts/drawer.js"></script>
+</body>
+</html>

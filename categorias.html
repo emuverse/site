@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Categorias</title>
+</head>
+
+<body>
+  <header>
+<h1>Categorias</h1>
+    
+<div class="drawer">
+  <div class="drawer-header">
+    EmuVerse
+    <span class="close-btn" onclick="closeDrawer()">&times;</span>
+  </div>
+  <ul class="drawer-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="categorias.html">Categorias</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=4689cd65-d3d3-4769-ae7f-d2e5fa977c2a" class="invert-colors" ></a>
+    <div class="search-container">
+  <input type="text" class="search-input" id="pesquisa" onkeyup="searchElements()" placeholder="Buscar">
+    </div>
+<script>
+  function searchElements() {
+    var searchTerm = document.getElementById("pesquisa").value.toLowerCase();
+    var elements = document.querySelectorAll(".app-card");
+
+    elements.forEach(function(element) {
+      var text = element.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+</script>
+</header>
+    <a href="playstation.html"><div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fplaystation.png?alt=media&token=0b099fb0-c261-4178-af41-8384ff13477b">
+      <h2>PlayStation</h2>
+      <p>A PlayStation é uma marca de consoles de videogame da Sony Interactive Entertainment, lançada em 1994. Ela é conhecida por tecnologia avançada, jogos populares e serviços online, como a PlayStation Network. Inclui várias gerações, como o PS1, PS2, PS3, PS4 e PS5.</p>
+    </div></a>
+    <a href="nintendo.html"><div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fnintendo.png?alt=media&token=47fa892a-8aaf-4183-8f58-5ca4ba922924">
+      <h2>Nintendo</h2>
+      <p>A Nintendo é uma marca de consoles de videogame famosa, criada em 1985. Conhecida por personagens icônicos como Mario e Zelda, a Nintendo produziu consoles como o NES, Super Nintendo, Nintendo 64, GameCube, Wii, Wii U e Switch, cada um trazendo inovações e jogos exclusivos. A empresa tem uma influência duradoura na indústria de jogos.</p>
+    </div></a>
+    <a href="windows.html"><div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fwindows.png?alt=media&token=644f5107-e718-4c6e-878b-399aee9e2cc4">
+      <h2>Windows</h2>
+      <p>O Windows, desenvolvido pela Microsoft, é um sistema operacional usado em computadores e dispositivos. Ele proporciona uma interface gráfica para a execução de programas, gestão de tarefas e mais.</p>
+    </div></a>
+  </section>
+  <footer>
+    <p>&copy; 2023 EmuVerse</p>
+  </footer>
+  <script src="Scripts/drawer.js"></script>
+</body>
+
+  </html>

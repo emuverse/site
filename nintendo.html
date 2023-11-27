@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>EmuVerse - Nintendo</title>
+</head>
+
+<body>
+  <header>
+    <h1>Nintendo</h1>
+    <div class="drawer">
+  <div class="drawer-header">
+    EmuVerse
+    <span class="close-btn" onclick="closeDrawer()">&times;</span>
+  </div>
+  <ul class="drawer-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="categorias.html">Categorias</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=4689cd65-d3d3-4769-ae7f-d2e5fa977c2a" class="invert-colors"></a>
+<div class="search-container">
+  <input type="text" class="search-input" id="pesquisa" onkeyup="searchElements()" placeholder="Buscar">
+</div>
+<script>
+  function searchElements() {
+    var searchTerm = document.getElementById("pesquisa").value.toLowerCase();
+    var elements = document.querySelectorAll(".app-card");
+
+    elements.forEach(function(element) {
+      var text = element.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+        </script>
+
+  </header>
+  <section class="app-list">
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fstrato.png?alt=media&token=514b403e-7f09-4393-af31-ce85560458bd">
+      <h2>Strato</h2>
+      <p>Strato é um emulador projetado especificamente para dispositivos Android que permite executar homebrews e jogos
+        do Nintendo Switch sem a necessidade de um controlador físico.</p>
+      <a href="Strato.apk" download>Baixar</a> <a href="https://strato-emu.com/">Site oficial</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fyuzu.png?alt=media&token=7dfde731-8633-4aef-b240-61c39afd481e">
+      <h2>Yuzu</h2>
+      <p>Yuzu é um emulador experimental de código aberto para o Nintendo Switch dos criadores do Citra.</p>
+      <a href="Yuzu.apk" download>Baixar</a> <a href="https://yuzu-emu.com/">Site oficial</a>
+    </div>
+        <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdownload.svg?alt=media&token=dca2c6cf-dbc6-41b4-b350-916c280d42a7">
+      <h2>Dolphin</h2>
+      <p>O Dolphin é um emulador de código aberto que permite jogar jogos do GameCube e Wii. Ele imita os consoles, permitindo melhorias gráficas, controles modernos e suporte a mods. Embora nem todos os jogos funcionem perfeitamente, o Dolphin é uma ótima maneira de reviver clássicos da Nintendo.</p>
+      <a href="Dolphin.apk" download>Baixar</a> <a href="https://br.dolphin-emu.org/">Site oficial</a>
+        </div>
+  </section>
+  <footer>
+    <p style="align-items: center;">&copy; 2023 EmuVerse</p>
+  </footer>
+  <script src="Scripts/drawer.js"></script></script>
+</body>
+
+  </html>

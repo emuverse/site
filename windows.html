@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>EmuVerse - PlayStation</title>
+</head>
+
+<body>
+  <header>
+    <h1>PlayStation</h1>
+<div class="drawer">
+  <div class="drawer-header">
+    EmuVerse
+    <span class="close-btn" onclick="closeDrawer()">&times;</span>
+  </div>
+  <ul class="drawer-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="categorias.html">Categorias</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=3e01204d-9a79-48bd-9921-bdce09cd9623" class="invert-colors"></a>
+
+
+    
+  
+    <div class="search-container">
+  <input type="text" class="search-input" id="pesquisa" onkeyup="searchElements()" placeholder="Buscar">
+    </div>
+
+<script>
+  function searchElements() {
+    var searchTerm = document.getElementById("pesquisa").value.toLowerCase();
+    var elements = document.querySelectorAll(".app-card");
+
+    elements.forEach(function(element) {
+      var text = element.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+</script>
+
+  </header>
+  <section class="app-list">
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fwinlator.png?alt=media&token=3e01204d-9a79-48bd-9921-bdce09cd9623">
+      <h2>Winlator</h2>
+      <p>O Winlator é um emulador de Windows projetado para dispositivos Android, permitindo que você execute uma
+        variedade de jogos e aplicativos do Windows diretamente no seu celular.</p>
+      <a id="downloadButton">Baixar</a> <a href="https://winlator.com/">Site oficial</a>
+<script>
+document.getElementById("downloadButton").addEventListener("click", function() {
+    window.location.href = "https://github.com/brunodev85/winlator/releases/download/v1.1.0/Winlator_1.1.apk";
+    window.open("https://github.com/brunodev85/winlator/releases/download/v1.0.0/main.1.com.winlator.obb", "_blank");
+});
+</script>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 EmuVerse</p>
+  </footer>
+  <script src="Scripts/drawer.js"></script>
+</body>
+</html>

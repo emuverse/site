@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>EmuVerse</title>
+</head>
+
+<body>
+  <header>
+    <h1>EmuVerse</h1>
+
+
+
+
+
+
+
+
+
+<div class="drawer">
+  <div class="drawer-header">
+    EmuVerse
+    <span class="close-btn" onclick="closeDrawer()">&times;</span>
+  </div>
+  <ul class="drawer-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="categorias.html">Categorias</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+  </ul>
+</div>
+
+<a class="open-btn" onclick="openDrawer()"><img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdrawer.png?alt=media&token=4689cd65-d3d3-4769-ae7f-d2e5fa977c2a" class="invert-colors"></a>
+
+
+
+
+    
+
+
+
+    <div class="search-container">
+  <input type="text" class="search-input" id="pesquisa" onkeyup="searchElements()" placeholder="Buscar">
+
+
+<script>
+  function searchElements() {
+    var searchTerm = document.getElementById("pesquisa").value.toLowerCase();
+    var elements = document.querySelectorAll(".app-card");
+
+    elements.forEach(function(element) {
+      var text = element.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+    
+  </header>
+  <section class="app-list">
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Faether.png?alt=media&token=7de5d7e5-337f-49fb-b17c-7021e2674adb">
+      <h2>AetherSX2</h2>
+      <p>O AetherSX2 é um emulador de PS2 para Android que permite jogar jogos do PS2 no seu celular ou tablet. Ele
+        recria a experiência de jogar no console PS2, mas no seu dispositivo móvel.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FAetherSX2%201.5-3668.apk?alt=media&token=fa3d5c09-a29e-413e-ac63-e2cad6b004cf" download>Baixar</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fppsspp.png?alt=media&token=1b18a775-c971-40bd-adc6-8da223a5aa3f">
+      <h2>PPSSPP</h2>
+      <p>O PPSSPP é um emulador que permite jogar jogos do PSP no seu computador ou dispositivo móvel. Ele recria a experiência do PlayStation Portable, possibilitando gráficos melhores e controles personalizados.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FPPSSPP%201.15.4.apk?alt=media&token=437515eb-7b79-414c-b5f8-1bf4dd706f05" download>Baixar</a> <a href="https://www.ppsspp.org/">Site oficial</a>
+    </div>
+
+
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2F1692466374472.png?alt=media&token=738561b9-9bed-426a-a4fe-b882841d69fb">
+      <h2>Play!</h2>
+      <p>O Play! é um emulador que permite jogar jogos do PS2 dispositivo móvel.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FPlay!.apk?alt=media&token=437515eb-7b79-414c-b5f8-1bf4dd706f05" download>Baixar</a> <a href="https://purei.org/">Site oficial</a>
+    </div>
+
+    
+    <div class="app-card">
+      <img src="https://emulation.gametechwiki.com/images/5/5a/DuckStation.png">
+      <h2>DuckStation</h2>
+      <p>DuckStation é um emulador de código aberto para jogos de PlayStation (PSX/PS1) que permite aos usuários jogar esses jogos em seus computadores e dispositivos. Ele tenta emular com precisão os sistemas de hardware originais para proporcionar uma experiência de jogo semelhante à dos consoles.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FDuckStation.apk?alt=media&token=173fdb1a-4fcc-400c-827d-08155712eb7d" download>Baixar</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fstrato.png?alt=media&token=514b403e-7f09-4393-af31-ce85560458bd">
+      <h2>Strato</h2>
+      <p>Strato é um emulador projetado especificamente para dispositivos Android que permite executar homebrews e jogos
+        do Nintendo Switch sem a necessidade de um controlador físico.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FStrato%200.0.3.apk?alt=media&token=4fe6e949-9332-4978-9ad0-0e896cb78d6b" download>Baixar</a> <a href="https://strato-emu.com/">Site oficial</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fyuzu.png?alt=media&token=7dfde731-8633-4aef-b240-61c39afd481e">
+      <h2>Yuzu</h2>
+      <p>Yuzu é um emulador experimental de código aberto para o Nintendo Switch dos criadores do Citra.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FYuzu.apk?alt=media&token=813e207e-b68b-4a45-9f78-ef58f8e7dba2" download>Baixar</a> <a href="https://yuzu-emu.com/">Site oficial</a>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fwinlator.png?alt=media&token=3e01204d-9a79-48bd-9921-bdce09cd9623">
+      <h2>Winlator</h2>
+      <p>O Winlator é um emulador de Windows projetado para dispositivos Android, permitindo que você execute uma
+        variedade de jogos e aplicativos do Windows diretamente no seu celular.</p>
+      <a id="downloadButton">Baixar</a> <a href="https://winlator.com/">Site oficial</a>
+<script>
+document.getElementById("downloadButton").addEventListener("click", function() {
+    window.location.href = "https://github.com/brunodev85/winlator/releases/download/v1.1.0/Winlator_1.1.apk";
+    window.open("https://github.com/brunodev85/winlator/releases/download/v1.0.0/main.1.com.winlator.obb", "_blank");
+});
+  </script>
+    </div>
+    <div class="app-card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Imagens%2Fdownload.svg?alt=media&token=dca2c6cf-dbc6-41b4-b350-916c280d42a7">
+      <h2>Dolphin</h2>
+      <p>O Dolphin é um emulador de código aberto que permite jogar jogos do GameCube e Wii. Ele imita os consoles, permitindo melhorias gráficas, controles modernos e suporte a mods. Embora nem todos os jogos funcionem perfeitamente, o Dolphin é uma ótima maneira de reviver clássicos da Nintendo.</p>
+      <a href="https://firebasestorage.googleapis.com/v0/b/emuversesite.appspot.com/o/Emuladores%2FDolphin%205.0-19872.apk?alt=media&token=f39f9eed-7dae-41fb-bdd0-56fc4d467e40" download>Baixar</a> <a href="https://br.dolphin-emu.org/">Site oficial</a>
+    </div>
+    
+  </section>
+  <footer>
+    <p style="align-items: center;">&copy; 2023 EmuVerse</p>
+  </footer>
+  <script src="Scripts/drawer.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCTbm6hOYNi-cxt5qczAEt7WoIBqhjno_Q",
+    authDomain: "emuversesite.firebaseapp.com",
+    projectId: "emuversesite",
+    storageBucket: "emuversesite.appspot.com",
+    messagingSenderId: "847422076713",
+    appId: "1:847422076713:web:b12893b515bc120abc6938",
+    measurementId: "G-REPFGXJM0V"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  </script>
+
+
+
+
+
+
+</body>
+
+</html>
